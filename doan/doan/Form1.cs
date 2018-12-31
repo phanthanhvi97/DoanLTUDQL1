@@ -15,6 +15,7 @@ namespace doan
         public Form1()
         {
             InitializeComponent();
+            load();
         }
         void load()
         {
