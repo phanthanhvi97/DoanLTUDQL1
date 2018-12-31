@@ -175,6 +175,22 @@ namespace doan
             }
 
         }
+        //texbox số lượng loại thuốc thay đổi kiểm tra phải số hay không
+        private void tbsuatxtsoloaithuoc_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxtsoloaithuoc.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbsuatxtsoloaithuoc.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbsuatxtsoloaithuoc.Text = tbsuatxtsoloaithuoc.Text.Remove(tbsuatxtsoloaithuoc.Text.Length - 1);
+                }
+            }
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
