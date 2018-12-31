@@ -750,7 +750,7 @@
             this.tbxembttxemdanhsachbenhnhan.TabIndex = 11;
             this.tbxembttxemdanhsachbenhnhan.Text = "xem";
             this.tbxembttxemdanhsachbenhnhan.UseVisualStyleBackColor = true;
-//            this.tbxembttxemdanhsachbenhnhan.Click += new System.EventHandler(this.tbxembttxemdanhsachbenhnhan_Click);
+          this.tbxembttxemdanhsachbenhnhan.Click += new System.EventHandler(this.tbxembttxemdanhsachbenhnhan_Click);
             // 
             // groupBox2
             // 

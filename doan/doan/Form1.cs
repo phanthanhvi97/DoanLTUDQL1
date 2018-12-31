@@ -356,5 +356,19 @@ namespace doan
             }
         }
 
+        //radiobutton được check
+        private void tbxemrdio_CheckedChanged(object sender, EventArgs e)
+        {
+            tbxemdanhsachkham.Enabled = !tbxemdanhsachkham.Enabled;
+        }
+
+        //xem danh sách bệnh nhân tab xem
+        private void tbxembttxemdanhsachbenhnhan_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            tbxemdgv.DataSource = ql.cau15();
+        }
+
+
     }
 }
