@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="udql" Class="UDQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EHNM3J5\MSSQLSERVER17;Initial Catalog=udql;Integrated Security=True" SettingsObjectName="doan.Properties.Settings" SettingsPropertyName="udqlConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Benh" Member="Benhs">
+    <Type Name="Benh">
+      <Column Name="MaBenh" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenBenh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Benh_DSKhamBenh" Member="DSKhamBenhs" ThisKey="MaBenh" OtherKey="MaBenh" Type="DSKhamBenh" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Thuoc" Member="Thuocs">
+    <Type Name="Thuoc">
+      <Column Name="MaThuoc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenThuoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaDonVi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SlTon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Thuoc_DSKhamBenh" Member="DSKhamBenhs" ThisKey="MaThuoc" OtherKey="MaThuoc" Type="DSKhamBenh" />
+      <Association Name="DonVi_Thuoc" Member="DonVi" ThisKey="MaDonVi" OtherKey="MaDonVi" Type="DonVi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BenhNhan" Member="BenhNhans">
+    <Type Name="BenhNhan">
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NamSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrieuChung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BenhNhan_DSKhamBenh" Member="DSKhamBenhs" ThisKey="MaBN" OtherKey="MaBN" Type="DSKhamBenh" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CachDung" Member="CachDungs">
+    <Type Name="CachDung">
+      <Column Name="MaCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HuongDan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CachDung_DSKhamBenh" Member="DSKhamBenhs" ThisKey="MaCD" OtherKey="MaCD" Type="DSKhamBenh" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonVi" Member="DonVis">
+    <Type Name="DonVi">
+      <Column Name="MaDonVi" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDonVi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DonVi_Thuoc" Member="Thuocs" ThisKey="MaDonVi" OtherKey="MaDonVi" Type="Thuoc" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DSKhamBenh" Member="DSKhamBenhs">
+    <Type Name="DSKhamBenh">
+      <Column Name="MaKB" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaBenh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaThuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaCD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayKham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Benh_DSKhamBenh" Member="Benh" ThisKey="MaBenh" OtherKey="MaBenh" Type="Benh" IsForeignKey="true" />
+      <Association Name="BenhNhan_DSKhamBenh" Member="BenhNhan" ThisKey="MaBN" OtherKey="MaBN" Type="BenhNhan" IsForeignKey="true" />
+      <Association Name="CachDung_DSKhamBenh" Member="CachDung" ThisKey="MaCD" OtherKey="MaCD" Type="CachDung" IsForeignKey="true" />
+      <Association Name="Thuoc_DSKhamBenh" Member="Thuoc" ThisKey="MaThuoc" OtherKey="MaThuoc" Type="Thuoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="xoa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThamSo" Member="ThamSos">
+    <Type Name="ThamSo">
+      <Column Name="MaLoai" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.cau1" Method="cau1">
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau9" Method="cau9">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau10" Method="cau10">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau11" Method="cau11">
+    <Parameter Name="mathuoc" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau12" Method="cau12">
+    <Parameter Name="mabn" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="namsinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="diachi" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="chieutrung" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau13" Method="cau13">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="cau13Result">
+      <Column Name="MaKB" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaBenh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaThuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaCD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayKham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau14" Method="cau14">
+    <Parameter Name="makb" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="mabn" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mabenh" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="mathuoc" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="sl" Type="System.Int32" DbType="Int" />
+    <Parameter Name="macd" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau15" Method="cau15">
+    <ElementType Name="cau15Result">
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NamSinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrieuChung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau16" Method="cau16">
+    <ElementType Name="cau16Result">
+      <Column Name="MaKB" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaBenh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaThuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaCD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayKham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau17" Method="cau17">
+    <Parameter Name="mabn" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="cau17Result">
+      <Column Name="MaKB" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenBenh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenThuoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HuongDan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaBN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayKham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau18" Method="cau18">
+    <Parameter Name="thang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="cau18Result">
+      <Column Name="ngaykham" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau19" Method="cau19">
+    <Parameter Name="thang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="cau19Result">
+      <Column Name="MaThuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TenThuoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenDonVi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cau20" Method="cau20">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau21" Method="cau21">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau22" Method="cau22">
+    <Parameter Name="makb" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau23" Method="cau23">
+    <Parameter Name="thang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau24" Method="cau24">
+    <Parameter Name="thang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau25" Method="cau25">
+    <Parameter Name="mathuoc" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ten" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="donvi" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="gia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sl" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau26" Method="cau26">
+    <Parameter Name="mathuoc" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau27" Method="cau27">
+    <Parameter Name="mabenh" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="tenbenh" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau28" Method="cau28">
+    <Parameter Name="mabenh" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau29" Method="cau29">
+    <Parameter Name="macd" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="tencd" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau3" Method="cau3">
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau30" Method="cau30">
+    <Parameter Name="macd" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau31" Method="cau31">
+    <Parameter Name="madv" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="tendv" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau32" Method="cau32">
+    <Parameter Name="madv" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau4" Method="cau4">
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau5" Method="cau5">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau6" Method="cau6">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau7" Method="cau7">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau8" Method="cau8">
+    <Parameter Name="soluong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

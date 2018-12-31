@@ -1,0 +1,9 @@
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\bin\Debug\doan.exe.config
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.csprojResolveAssemblyReference.cache
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.Form1.resources
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.Properties.Resources.resources
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.csproj.GenerateResource.Cache
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\bin\Debug\doan.exe
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\bin\Debug\doan.pdb
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.exe
+C:\Users\Thuy Ngo\Desktop\doanudql\doan\doan\obj\Debug\doan.pdb
