@@ -819,7 +819,7 @@
             this.tbxembttsoluongthuoc.TabIndex = 11;
             this.tbxembttsoluongthuoc.Text = "s,lượng";
             this.tbxembttsoluongthuoc.UseVisualStyleBackColor = true;
-//            this.tbxembttsoluongthuoc.Click += new System.EventHandler(this.tbxembttsoluongthuoc_Click);
+
             // 
             // tbxemdgv
             // 

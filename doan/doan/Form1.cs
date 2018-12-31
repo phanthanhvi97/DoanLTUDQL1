@@ -211,6 +211,25 @@ namespace doan
                 MessageBox.Show("không  đủ thông tin");
             }
         }
+        // xem số lượng thuốc theo tháng
+        // chưa làm xong
+        private void tbxembttsoluongthuoc_Click(object sender, EventArgs e)
+        {
+            if (textBox10.Text != "" && textBox9.Text != "")
+            {
+
+                UDQLDataContext ql = new UDQLDataContext();
+                tbxemdgv.DataSource = ql.cau19(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                tbxembttxuatdlthuoc.Enabled = !tbxembttxuatdlthuoc.Enabled;
+                //câu này là câu 19
+            }
+            else
+            {
+                tbxemdgv.DataSource = "";
+                MessageBox.Show("không  đủ thông tin");
+
+            }
+        }
 
     }
 }
