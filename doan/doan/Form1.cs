@@ -631,6 +631,22 @@ namespace doan
                 }
             }
         }
+        //số lượng thuốc phiếu khám bệnh thay đổi
+        private void tbthemtxtphieusoluong_TextChanged(object sender, EventArgs e)
+        {
+            if (tbthemtxtphieusoluong.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbthemtxtphieusoluong.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbthemtxtphieusoluong.Text = tbthemtxtphieusoluong.Text.Remove(tbthemtxtphieusoluong.Text.Length - 1);
+                }
+            }
+        }
 
         // xuất hóa đơn cúa bệnh nhân
         private void tbxembttxuat_Click(object sender, EventArgs e)
