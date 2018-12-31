@@ -451,5 +451,24 @@ namespace doan
             }
         }
 
+        // xuất hóa đơn cúa bệnh nhân
+        private void tbxembttxuat_Click(object sender, EventArgs e)
+        {
+            if (tbxemtxtmakb.Text == "" || tbxemtxttenbenhnhan.Text == "")
+            {
+                MessageBox.Show("không đủ thông tin thống kê doanh thu. vui lòng điền tháng và ngày vào(bên thống kê)");
+                tbxemtxtmakb.Text = "";
+                tbxemtxtmakb.Focus();
+            }
+            else
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                ql.cau22(tbxemtxtmakb.Text);
+                OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
+                chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
+                chuc.ShowDialog();// Hiển thị file
+            }
+        }
+
     }
 }
