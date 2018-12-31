@@ -196,6 +196,21 @@ namespace doan
 
 
         }
+        //xem doanh thu theo tháng
+        private void tbxembttdoanhthu_Click(object sender, EventArgs e)
+        {
+            if (textBox10.Text != "" && textBox9.Text != "")
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                tbxemdgv.DataSource = ql.cau18(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                tabxembttxuatdoanhthu.Enabled = !tabxembttxuatdoanhthu.Enabled;
+            }
+            else
+            {
+                tbxemdgv.DataSource = "";
+                MessageBox.Show("không  đủ thông tin");
+            }
+        }
 
     }
 }

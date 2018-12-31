@@ -769,16 +769,13 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thống kê";
-            // 
-            // tbxembttdoanhthu
-            // 
+            //xem danh thu
             this.tbxembttdoanhthu.Location = new System.Drawing.Point(15, 107);
             this.tbxembttdoanhthu.Name = "tbxembttdoanhthu";
             this.tbxembttdoanhthu.Size = new System.Drawing.Size(65, 23);
             this.tbxembttdoanhthu.TabIndex = 17;
             this.tbxembttdoanhthu.Text = "doanh thu";
             this.tbxembttdoanhthu.UseVisualStyleBackColor = true;
- //           this.tbxembttdoanhthu.Click += new System.EventHandler(this.tbxembttdoanhthu_Click);
             // 
             // textBox10
             // 
