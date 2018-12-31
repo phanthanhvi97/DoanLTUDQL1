@@ -212,7 +212,6 @@
             this.tbsuabttxoa.TabIndex = 6;
             this.tbsuabttxoa.Text = "xóa tài khoản này";
             this.tbsuabttxoa.UseVisualStyleBackColor = true;
-//            this.tbsuabttxoa.Click += new System.EventHandler(this.tbsuabttxoa_Click);
             // 
             // tabPage3
             // 
