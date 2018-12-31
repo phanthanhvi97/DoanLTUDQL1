@@ -16,6 +16,10 @@ namespace doan
         {
             InitializeComponent();
         }
+        void load()
+        {
+
+        }
         //sửa tham số
         private void tbsuabttthamsosua_Click(object sender, EventArgs e)
         {
