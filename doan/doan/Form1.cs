@@ -45,6 +45,11 @@ namespace doan
                 Application.Exit();
             }
         }
+        //logout
+        private void bttlogout_Click(object sender, EventArgs e)
+        {
+            load();
+        }
         //sửa tham số
         private void tbsuabttthamsosua_Click(object sender, EventArgs e)
         {
