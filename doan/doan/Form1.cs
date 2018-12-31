@@ -245,6 +245,65 @@ namespace doan
             }
 
         }
+        // thêm danh sách khám bệnh
+        private void tbthembttphieukham_Click(object sender, EventArgs e)
+        {
+
+            if (tbthemtxtphieumakb.Text != "")
+            {
+                if (tbthemtxtphieusoluong.Text == "")
+                    tbthemtxtphieusoluong.Text = "0";
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau14(tbthemtxtphieumakb.Text, tbthemtxtphieumabn.Text, tbthemtxtphieumabenh.Text, tbthemtxtphieumathuoc.Text, int.Parse(tbthemtxtphieusoluong.Text), tbthemtxtphieumacd.Text);
+                if (i == 0)
+                {
+                    MessageBox.Show("không thêm được do thiếu bệnh nhân");
+                    return;
+                }
+                else if (i == 1)
+                {
+                    tbthemdgv.DataSource = from a in ql.DSKhamBenhs
+                                           where a.MaKB == tbthemtxtphieumakb.Text
+                                           select new
+                                           {
+                                               a.MaKB,
+                                               a.MaBN,
+                                               a.NgayKham,
+                                               a.SoLuong,
+                                               a.MaThuoc,
+                                               a.MaCD,
+                                               a.ThanhTien
+                                           };
+                    return;
+
+                }
+                else if (i == 2)
+                {
+                    MessageBox.Show("không thêm được do bã bệnh k đúng");
+                    return;
+                }
+                else if (i == 3)
+                {
+                    MessageBox.Show("không thêm được do bã thuốc k đúng");
+                    return;
+                }
+                else if (i == 4)
+                {
+                    MessageBox.Show("không thêm được do mã cách dùng k đúng");
+                    return;
+                }
+                else if (i == 5)
+                {
+                    MessageBox.Show("không thêm được do bệnh nhân đã tồn tại");
+                    return;
+                }
+                else if (i == 6)
+                {
+                    MessageBox.Show("không thêm được do vượt quá số bệnh nhân trên ngày");
+                    return;
+                }
+            }
+        }
 
     }
 }

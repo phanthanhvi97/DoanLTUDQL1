@@ -264,7 +264,6 @@
             this.tbthembttphieukham.TabIndex = 12;
             this.tbthembttphieukham.Text = "thêm";
             this.tbthembttphieukham.UseVisualStyleBackColor = true;
-//            this.tbthembttphieukham.Click += new System.EventHandler(this.tbthembttphieukham_Click);
             // 
             // tbthemtxtphieumacd
             // 
