@@ -512,5 +512,25 @@ namespace doan
                 tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
             }
         }
+
+        //thêm cách dùng
+        private void CDbttthem_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau29(CDtxtma.Text, CDtxtHD.Text);
+            if (i == 1)
+            {
+                MessageBox.Show("CD đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
+
+            }
+            else if (i == 2)
+            {
+                MessageBox.Show("mã CD đã tồn tại yêu cầu thay đổi mã");
+            }
+            else
+            {
+                CDvDVdgv.DataSource = from a in ql.CachDungs where 1 == 1 select new { a.MaCD, a.HuongDan };
+            }
+        }
     }
 }

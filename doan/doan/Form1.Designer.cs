@@ -1372,7 +1372,7 @@
             this.CDbttthem.TabIndex = 3;
             this.CDbttthem.Text = "thêm";
             this.CDbttthem.UseVisualStyleBackColor = true;
-  //          this.CDbttthem.Click += new System.EventHandler(this.CDbttthem_Click);
+           this.CDbttthem.Click += new System.EventHandler(this.CDbttthem_Click);
             // 
             // CDtxtma
             // 
