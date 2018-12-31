@@ -158,6 +158,23 @@ namespace doan
             }
 
         }
+        //textbox số lượng bệnh nhân thay đổi để kiểm tra nó là số
+        private void tbsuatxtsobenhnhanngay_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxtsobenhnhanngay.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbsuatxtsobenhnhanngay.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbsuatxtsobenhnhanngay.Text = tbsuatxtsobenhnhanngay.Text.Remove(tbsuatxtsobenhnhanngay.Text.Length - 1);
+                }
+            }
+
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
