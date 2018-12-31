@@ -322,6 +322,20 @@ namespace doan
                 chuc.ShowDialog();// Hiển thị file
             }
         }
+        //xóa bệnh
+        private void bbttxoa_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau28(btxtmabenh.Text);
+            if (i == 1)
+            {
+                MessageBox.Show("mã bệnh không  tồn tại");
+            }
+            else
+            {
+                tvbdgv.DataSource = from a in ql.Benhs where 1 == 1 select new { a.MaBenh, a.TenBenh };
+            }
+        }
 
     }
 }

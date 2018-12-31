@@ -1107,8 +1107,7 @@
             this.bbttxoa.Size = new System.Drawing.Size(75, 23);
             this.bbttxoa.TabIndex = 20;
             this.bbttxoa.Text = "xóa";
-            this.bbttxoa.UseVisualStyleBackColor = true;
-//            this.bbttxoa.Click += new System.EventHandler(this.bbttxoa_Click);
+            this.bbttxoa.UseVisualStyleBackColor = true;          
             // 
             // label39
             // 
