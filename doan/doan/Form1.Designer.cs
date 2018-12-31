@@ -544,7 +544,7 @@
             this.tbxembttxuatdlthuoc.TabIndex = 28;
             this.tbxembttxuatdlthuoc.Text = "xuất";
             this.tbxembttxuatdlthuoc.UseVisualStyleBackColor = true;
- //           this.tbxembttxuatdlthuoc.Click += new System.EventHandler(this.tbxembttxuatdlthuoc_Click);
+            this.tbxembttxuatdlthuoc.Click += new System.EventHandler(this.tbxembttxuatdlthuoc_Click);
             // 
             // label31
             // 

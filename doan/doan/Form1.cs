@@ -479,5 +479,25 @@ namespace doan
             chuc.ShowDialog();// Hiển thị file
         }
 
+        //xuất dữ liệu thuốc bên tab xem
+        private void tbxembttxuatdlthuoc_Click(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "" || textBox10.Text == "")
+            {
+                MessageBox.Show("không đủ thông tin thống kê doanh thu. vui lòng điền tháng và ngày vào(bên thống kê)");
+                textBox10.Text = "";
+                textBox9.Focus();
+            }
+            else
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                ql.cau24(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
+                chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
+                chuc.ShowDialog();// Hiển thị file
+            }
+        }
+
+
     }
 }
