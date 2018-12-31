@@ -18,7 +18,31 @@ namespace doan
         }
         void load()
         {
+            UDQLDataContext ql = new UDQLDataContext();
+            login f = new login();
+            this.Hide();
+            f.ShowDialog();
+            //nếu bên login  xác nhận đúng mk và tài khoản
+            if (login.i == 1)
+            {
+                //cho chào chủ sở hữu
+                lblchao.Text = "chào " + login.username;
 
+                var donvi = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi };
+                foreach (var dv in donvi)
+                {
+                    tcmbdonvi.Items.Add(dv.MaDonVi);
+                }
+                tcmbdonvi.SelectedItem = tcmbdonvi.Items[0];
+
+                this.Show();
+
+            }
+            else// bên login thông báo không thành công
+            {
+
+                Application.Exit();
+            }
         }
         //sửa tham số
         private void tbsuabttthamsosua_Click(object sender, EventArgs e)
