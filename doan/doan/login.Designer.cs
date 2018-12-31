@@ -98,9 +98,7 @@
             this.tbdnbttdongy.Size = new System.Drawing.Size(75, 23);
             this.tbdnbttdongy.TabIndex = 0;
             this.tbdnbttdongy.Text = "đồng ý";
-            this.tbdnbttdongy.UseVisualStyleBackColor = true;
- //           this.tbdnbttdongy.Click += new System.EventHandler(this.tbdnbttdongy_Click);
-            // 
+            this.tbdnbttdongy.UseVisualStyleBackColor = true; 
             // tbdntxttaikhoan
             // 
             this.tbdntxttaikhoan.Location = new System.Drawing.Point(90, 38);

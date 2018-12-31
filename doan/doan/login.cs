@@ -34,5 +34,11 @@ namespace doan
             login.i = 1;
             this.Close();
         }
+        private void tbdnbttthoat_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("bạn có muốn thoát ?", "thông báo", MessageBoxButtons.YesNo);
+            if (r == System.Windows.Forms.DialogResult.Yes)
+                this.Close();
+        }
     }
 }
