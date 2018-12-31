@@ -191,6 +191,22 @@ namespace doan
                 }
             }
         }
+        //texbox số lượng soloaibenh thay đổi kiểm tra phải số hay không
+        private void tbsuatxtsoloaibenh_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxtsoloaibenh.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbsuatxtsoloaibenh.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbsuatxtsoloaibenh.Text = tbsuatxtsoloaibenh.Text.Remove(tbsuatxtsoloaibenh.Text.Length - 1);
+                }
+            }
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
