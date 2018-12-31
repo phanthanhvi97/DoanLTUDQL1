@@ -336,6 +336,25 @@ namespace doan
                 tvbdgv.DataSource = from a in ql.Benhs where 1 == 1 select new { a.MaBenh, a.TenBenh };
             }
         }
+        //thêm đơn vị
+        private void DVbttthem_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau31(DVtxtdonvi.Text, DVtxtten.Text);
+            if (i == 1)
+            {
+                MessageBox.Show("bệnh đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
+
+            }
+            else if (i == 2)
+            {
+                MessageBox.Show("mã bệnh đã tồn tại yêu cầu thay đổi mã");
+            }
+            else
+            {
+                CDvDVdgv.DataSource = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi, a.TenDonVi };
+            }
+        }
 
     }
 }

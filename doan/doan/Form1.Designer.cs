@@ -1439,7 +1439,6 @@
             this.DVbttthem.TabIndex = 3;
             this.DVbttthem.Text = "thêm";
             this.DVbttthem.UseVisualStyleBackColor = true;
- //           this.DVbttthem.Click += new System.EventHandler(this.DVbttthem_Click);
             // 
             // DVtxtdonvi
             // 
