@@ -255,6 +255,31 @@ namespace doan
                 }
             }
         }
+        //mã thuốc tab sửa thay đổi
+        private void tbsuatxtmathuoc_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxtmathuoc.Text != "")
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                using (ql)
+                {
+                    var qlnek = ql.Thuocs.Where(s => s.MaThuoc == tbsuatxtmathuoc.Text).SingleOrDefault();
+                    if (qlnek != null)
+                    {
+                        tbsuatxttenthuoc.Text = qlnek.TenThuoc;
+                    }
+                    else
+                    {
+                        tbsuatxttenthuoc.Text = "";
+                    }
+                }
+            }
+            else
+            {
+                tbsuatxttenthuoc.Text = "";
+            }
+
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
