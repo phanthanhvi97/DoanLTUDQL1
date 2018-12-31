@@ -140,6 +140,27 @@ namespace doan
                 }
             }
         }
+        // xóa mật khẩu
+        private void tbsuabttthuocsua_Click(object sender, EventArgs e)
+        {
+            if (tbsuatxtsoluong.Text != null && tbsuatxtmathuoc.Text != null)
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau11(tbsuatxtmathuoc.Text, int.Parse(tbsuatxtsoluong.Text));
+                if (i == 0)
+                {
+                    MessageBox.Show("mật khẩu không chính xác, xóa không được");
+                    return;
+                }
+                tbsuadgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
+            }
+            else
+            {
+                tbsuadgv.DataSource = "";
+                MessageBox.Show("thiếu thông tin ");
+            }
+
+        }
 
     }
 }
