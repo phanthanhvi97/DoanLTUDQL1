@@ -979,7 +979,7 @@
             this.tbsuabttthamsosua.TabIndex = 17;
             this.tbsuabttthamsosua.Text = "sửa";
             this.tbsuabttthamsosua.UseVisualStyleBackColor = true;
- //           this.tbsuabttthamsosua.Click += new System.EventHandler(this.tbsuabttthamsosua_Click);
+           this.tbsuabttthamsosua.Click += new System.EventHandler(this.tbsuabttthamsosua_Click);
             // 
             // groupBox1
             // 
