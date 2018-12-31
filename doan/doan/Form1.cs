@@ -230,6 +230,21 @@ namespace doan
 
             }
         }
+        // xem hóa đơn của bệnh nhân
+        private void tbxembttxemhoadon_Click(object sender, EventArgs e)
+        {
+            if (tbxemtxtmakb.Text != "" && tbxemtxttenbenhnhan.Text != "")
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                tbxemdgv.DataSource = ql.cau17(tbxemtxtmakb.Text);
+            }
+            else
+            {
+                tbxemdgv.DataSource = "";
+                MessageBox.Show("không đủ thông tin");
+            }
+
+        }
 
     }
 }

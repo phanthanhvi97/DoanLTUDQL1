@@ -590,7 +590,6 @@
             this.tbxembttxemhoadon.TabIndex = 32;
             this.tbxembttxemhoadon.Text = "xem";
             this.tbxembttxemhoadon.UseVisualStyleBackColor = true;
-//            this.tbxembttxemhoadon.Click += new System.EventHandler(this.tbxembttxemhoadon_Click);
             // 
             // tbxemtxttenbenhnhan
             // 
