@@ -106,6 +106,22 @@ namespace doan
                 tbsuadgv.DataSource = from a in ql.ThamSos where 1 == 1 select new { a.TenLoai, a.SoLuong };
             }
         }
+        //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
+        private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxtsoluong.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbsuatxtsoluong.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbsuatxtsoluong.Text = tbsuatxtsoluong.Text.Remove(tbsuatxtsoluong.Text.Length - 1);
+                }
+            }
+        }
 
     }
 }
