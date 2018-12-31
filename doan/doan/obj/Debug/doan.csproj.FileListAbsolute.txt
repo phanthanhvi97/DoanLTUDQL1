@@ -13,3 +13,6 @@ E:\ltudql\doan\doan\obj\Debug\doan.pdb
 C:\Users\Thuy Ngo\Desktop\New folder\doan\doan\bin\Debug\doan.exe.config
 C:\Users\Thuy Ngo\Desktop\New folder\doan\doan\obj\Debug\doan.exe
 C:\Users\Thuy Ngo\Desktop\New folder\doan\doan\obj\Debug\doan.pdb
+C:\Users\Thuy Ngo\Desktop\doan\doan\doan\bin\Debug\doan.exe.config
+C:\Users\Thuy Ngo\Desktop\doan\doan\doan\obj\Debug\doan.exe
+C:\Users\Thuy Ngo\Desktop\doan\doan\doan\obj\Debug\doan.pdb

@@ -804,7 +804,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(91, 20);
             this.textBox9.TabIndex = 14;
- //           this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+           this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label11
             // 
@@ -1012,7 +1012,7 @@
             this.tbsuatxtsoluong.Name = "tbsuatxtsoluong";
             this.tbsuatxtsoluong.Size = new System.Drawing.Size(91, 20);
             this.tbsuatxtsoluong.TabIndex = 16;
- //           this.tbsuatxtsoluong.TextChanged += new System.EventHandler(this.tbsuatxtsoluong_TextChanged);
+           this.tbsuatxtsoluong.TextChanged += new System.EventHandler(this.tbsuatxtsoluong_TextChanged);
             // 
             // label9
             // 

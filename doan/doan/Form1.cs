@@ -140,6 +140,22 @@ namespace doan
                 }
             }
         }
+        //tháng thay đổi
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox9.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(textBox9.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    textBox9.Text = textBox9.Text.Remove(textBox9.Text.Length - 1);
+                }
+            }
+        }
 
     }
 }
