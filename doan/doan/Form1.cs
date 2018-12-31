@@ -223,6 +223,22 @@ namespace doan
                 }
             }
         }
+        //texbox số lượng tbsuatxttienkham thay đổi kiểm tra phải số hay không
+        private void tbsuatxttienkham_TextChanged(object sender, EventArgs e)
+        {
+            if (tbsuatxttienkham.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(tbsuatxttienkham.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    tbsuatxttienkham.Text = tbsuatxttienkham.Text.Remove(tbsuatxttienkham.Text.Length - 1);
+                }
+            }
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
