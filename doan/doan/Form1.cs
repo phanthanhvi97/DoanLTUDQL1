@@ -722,6 +722,19 @@ namespace doan
                 tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
             }
         }
+        //đơn vị thay đổi thì hiển thị tên tương ứng
+        private void tcmbdonvi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            var qlnek = from a in ql.DonVis where a.MaDonVi == tcmbdonvi.Text select new { a.TenDonVi };
+            if (qlnek != null)
+            {
+                foreach (var ten in qlnek)
+                {
+                    tmadonvi.Text = ten.TenDonVi;
+                }
+            }
+        }
         //xóa thuốc
         private void tbttxoa_Click(object sender, EventArgs e)
         {
