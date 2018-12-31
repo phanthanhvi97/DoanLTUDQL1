@@ -93,9 +93,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tạo tài khoản";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tbdnbttdongy
-            // 
             this.tbdnbttdongy.Location = new System.Drawing.Point(80, 169);
             this.tbdnbttdongy.Name = "tbdnbttdongy";
             this.tbdnbttdongy.Size = new System.Drawing.Size(75, 23);

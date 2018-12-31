@@ -12,9 +12,27 @@ namespace doan
 {
     public partial class login : Form
     {
+        public static string username;
+        public static string password;
+        public static int i = 0;
         public login()
         {
             InitializeComponent();
+        }
+        private void tbdnbttdongy_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau1(tbdntxtmatkhau.Text, tbdntxttaikhoan.Text);
+            if (i == 0)
+            {
+                MessageBox.Show("mật khẩu không chính xác");
+                return;
+            }
+
+            username = tbdntxttaikhoan.Text;
+            password = tbdntxtmatkhau.Text;
+            login.i = 1;
+            this.Close();
         }
     }
 }
