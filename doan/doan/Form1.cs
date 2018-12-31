@@ -368,7 +368,28 @@ namespace doan
             UDQLDataContext ql = new UDQLDataContext();
             tbxemdgv.DataSource = ql.cau15();
         }
+        // danh sách bệnh nhân theo ngày hoạc là xem hết luon nek
+        private void tbxemdanhsachkham_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == false)
+            {
+                // xem theo ngày
+                UDQLDataContext ql = new UDQLDataContext();
+                tbxemdgv.DataSource = ql.cau13(tbxemdtp.Value);
+            }
+            else
+            {
+                //xem hết
+                UDQLDataContext ql = new UDQLDataContext();
+                tbxemdgv.DataSource = ql.cau16();
+            }
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            tbxemdtp.Enabled = !tbxemdtp.Enabled;
+        }
 
     }
 }

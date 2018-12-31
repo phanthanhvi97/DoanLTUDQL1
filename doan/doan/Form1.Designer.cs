@@ -705,7 +705,7 @@
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.checkBox1.UseVisualStyleBackColor = true;
-//            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+           this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // tbxemdtp
             // 
@@ -722,7 +722,7 @@
             this.tbxemdanhsachkham.TabIndex = 22;
             this.tbxemdanhsachkham.Text = "xem";
             this.tbxemdanhsachkham.UseVisualStyleBackColor = true;
-//            this.tbxemdanhsachkham.Click += new System.EventHandler(this.tbxemdanhsachkham_Click);
+            this.tbxemdanhsachkham.Click += new System.EventHandler(this.tbxemdanhsachkham_Click);
             // 
             // label12
             // 
