@@ -703,7 +703,25 @@ namespace doan
                 chuc.ShowDialog();// Hiển thị file
             }
         }
+        //thêm thuốc
+        private void tbttthem_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau25(ttxtmathuoc.Text, ttxttenthuoc.Text, tcmbdonvi.Text, int.Parse(ttxtgia.Text), int.Parse(ttxtslton.Text));
+            if (i == 1)
+            {
+                MessageBox.Show("thuốc đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
 
+            }
+            else if (i == 2)
+            {
+                MessageBox.Show("mã thuốc đã tồn tại yêu cầu thay đổi mã");
+            }
+            else
+            {
+                tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
+            }
+        }
         //xóa thuốc
         private void tbttxoa_Click(object sender, EventArgs e)
         {
