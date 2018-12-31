@@ -498,6 +498,19 @@ namespace doan
             }
         }
 
-
+        //xóa thuốc
+        private void tbttxoa_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau26(ttxtmathuoc.Text);
+            if (i == 1)
+            {
+                MessageBox.Show("mã thuốc không  tồn tại");
+            }
+            else
+            {
+                tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
+            }
+        }
     }
 }

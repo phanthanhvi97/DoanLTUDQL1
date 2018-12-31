@@ -1182,7 +1182,7 @@
             this.tbttxoa.TabIndex = 16;
             this.tbttxoa.Text = "xóa";
             this.tbttxoa.UseVisualStyleBackColor = true;
-  //          this.tbttxoa.Click += new System.EventHandler(this.tbttxoa_Click);
+            this.tbttxoa.Click += new System.EventHandler(this.tbttxoa_Click);
             // 
             // label37
             // 
