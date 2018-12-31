@@ -546,6 +546,31 @@ namespace doan
         {
             tbxemdtp.Enabled = !tbxemdtp.Enabled;
         }
+        // khi mã khám bệnh nhân bênh tab xem bị thay đổi
+        private void tbxemtxtmakb_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxemtxtmakb.Text != "")
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                using (ql)
+                {
+                    var qlnek = ql.DSKhamBenhs.Where(s => s.MaKB == tbxemtxtmakb.Text).SingleOrDefault();
+                    if (qlnek != null)
+                    {
+                        string a = qlnek.MaBN;
+                        var b = ql.BenhNhans.Where(s => s.MaBN == a).SingleOrDefault();
+                        if (b != null)
+                            tbxemtxttenbenhnhan.Text = b.HoTen;
+
+                    }
+                    else
+                    {
+                        tbxemtxttenbenhnhan.Text = "";
+                    }
+                }
+            }
+        }
+
 
         // thêm danh sách khám bệnh
         private void tbthembttphieukham_Click(object sender, EventArgs e)
