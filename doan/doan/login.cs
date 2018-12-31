@@ -19,6 +19,7 @@ namespace doan
         {
             InitializeComponent();
         }
+        // Đăng nhập
         private void tbdnbttdongy_Click(object sender, EventArgs e)
         {
             UDQLDataContext ql = new UDQLDataContext();

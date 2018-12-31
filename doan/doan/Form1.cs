@@ -106,6 +106,24 @@ namespace doan
                 tbsuadgv.DataSource = from a in ql.ThamSos where 1 == 1 select new { a.TenLoai, a.SoLuong };
             }
         }
+        //xóa tài khoản
+        private void tbsuabttxoa_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("bạn có chắc xóa tài khoản hiển tại?", "thông bảo", MessageBoxButtons.YesNo);
+            if (r == System.Windows.Forms.DialogResult.Yes)
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau4(login.password, login.username);
+                if (i == 0)
+                {
+                    MessageBox.Show("mật khẩu không chính xác, xóa không được");
+                    return;
+                }
+
+                load();
+            }
+
+        }
         //tbsuatxtsoluong thay đổi kiểm tra có phải là số k
         private void tbsuatxtsoluong_TextChanged(object sender, EventArgs e)
         {
