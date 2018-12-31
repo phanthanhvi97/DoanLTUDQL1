@@ -564,7 +564,6 @@
             this.tabxembttxuatdoanhthu.TabIndex = 26;
             this.tabxembttxuatdoanhthu.Text = "xuất";
             this.tabxembttxuatdoanhthu.UseVisualStyleBackColor = true;
- //           this.tabxembttxuatdoanhthu.Click += new System.EventHandler(this.tabxembttxuatdoanhthu_Click);
             // 
             // groupBox7
             // 
