@@ -156,6 +156,23 @@ namespace doan
                     textBox9.Text = textBox9.Text.Remove(textBox9.Text.Length - 1);
                 }
             }
+        }
+            //năm thay đổi
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox10.Text != "")
+            {
+                try
+                {
+                    int i = int.Parse(textBox10.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("không phải số");
+                    textBox10.Text = textBox10.Text.Remove(textBox10.Text.Length - 1);
+                }
+            }
+        }
 
         // xóa mật khẩu
         private void tbsuabttthuocsua_Click(object sender, EventArgs e)
