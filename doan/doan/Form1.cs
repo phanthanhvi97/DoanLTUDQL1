@@ -469,6 +469,15 @@ namespace doan
                 chuc.ShowDialog();// Hiển thị file
             }
         }
+        //xuất danh sách khám bệnh của tab xem
+        private void tbxemsuatsanhsachkhambenh_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            ql.cau21();
+            OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
+            chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
+            chuc.ShowDialog();// Hiển thị file
+        }
 
     }
 }

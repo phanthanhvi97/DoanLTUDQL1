@@ -650,7 +650,7 @@
             this.tbxemsuatsanhsachkhambenh.TabIndex = 22;
             this.tbxemsuatsanhsachkhambenh.Text = "xuất";
             this.tbxemsuatsanhsachkhambenh.UseVisualStyleBackColor = true;
-//            this.tbxemsuatsanhsachkhambenh.Click += new System.EventHandler(this.tbxemsuatsanhsachkhambenh_Click);
+           this.tbxemsuatsanhsachkhambenh.Click += new System.EventHandler(this.tbxemsuatsanhsachkhambenh_Click);
             // 
             // label14
             // 
