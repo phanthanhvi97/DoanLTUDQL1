@@ -775,5 +775,19 @@ namespace doan
                 CDvDVdgv.DataSource = from a in ql.CachDungs where 1 == 1 select new { a.MaCD, a.HuongDan };
             }
         }
+        //xóa đơn vị
+        private void DVbttxoa_Click(object sender, EventArgs e)
+        {
+            UDQLDataContext ql = new UDQLDataContext();
+            int i = ql.cau32(DVtxtdonvi.Text);
+            if (i == 1)
+            {
+                MessageBox.Show("mã bệnh không  tồn tại");
+            }
+            else
+            {
+                CDvDVdgv.DataSource = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi, a.TenDonVi };
+            }
+        }
     }
 }
