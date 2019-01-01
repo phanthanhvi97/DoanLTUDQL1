@@ -159,7 +159,7 @@
             this.tbtbtttao.TabIndex = 1;
             this.tbtbtttao.Text = "tạo";
             this.tbtbtttao.UseVisualStyleBackColor = true;
- //           this.tbtbtttao.Click += new System.EventHandler(this.tbtbtttao_Click);
+         this.tbtbtttao.Click += new System.EventHandler(this.tbtbtttao_Click);
             // 
             // tbttxttaikhoan
             // 
@@ -210,7 +210,7 @@
             this.tbtbttthoat.TabIndex = 7;
             this.tbtbttthoat.Text = "thoát";
             this.tbtbttthoat.UseVisualStyleBackColor = true;
-  //          this.tbtbttthoat.Click += new System.EventHandler(this.tbtbttthoat_Click);
+           this.tbtbttthoat.Click += new System.EventHandler(this.tbtbttthoat_Click);
             // 
             // login
             // 
