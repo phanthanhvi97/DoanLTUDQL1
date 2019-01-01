@@ -749,6 +749,25 @@ namespace doan
                 tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
             }
         }
+
+        // thêm bệnh nhân
+        private void tbthembttbenhnhan_Click(object sender, EventArgs e)
+        {
+            if (tbthemtxtmabn.Text != "")
+            {
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau12(tbthemtxtmabn.Text, tbthemtxthoten.Text, tbthemcmbgioitinh.Text, tbthemdupngaysinh.Value, tbxemthemtxtdiachi.Text, tbthemtxtctrung.Text);
+                if (i == 0)
+                {
+                    MessageBox.Show("không thêm được");
+                    return;
+                }
+                else if (i == 1)
+                {
+                    tbthemdgv.DataSource = from a in ql.BenhNhans where a.MaBN == tbthemtxtmabn.Text select new { a.MaBN, a.HoTen, a.GioiTinh, a.NamSinh, a.TrieuChung };
+                }
+            }
+        }
         //thêm bệnh
         private void bbtthem_Click(object sender, EventArgs e)
         {
