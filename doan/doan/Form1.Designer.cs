@@ -193,6 +193,7 @@
             this.bttlogout.TabIndex = 3;
             this.bttlogout.Text = "logout";
             this.bttlogout.UseVisualStyleBackColor = true;
+            this.bttlogout.Click += new System.EventHandler(this.bttlogout_Click);
             // 
             // lblchao
             // 
@@ -211,6 +212,7 @@
             this.tbsuabttxoa.TabIndex = 6;
             this.tbsuabttxoa.Text = "xóa tài khoản này";
             this.tbsuabttxoa.UseVisualStyleBackColor = true;
+            this.tbsuabttxoa.Click += new System.EventHandler(this.tbsuabttxoa_Click);
             // 
             // tabPage3
             // 
@@ -263,6 +265,7 @@
             this.tbthembttphieukham.TabIndex = 12;
             this.tbthembttphieukham.Text = "thêm";
             this.tbthembttphieukham.UseVisualStyleBackColor = true;
+            this.tbthembttphieukham.Click += new System.EventHandler(this.tbthembttphieukham_Click);
             // 
             // tbthemtxtphieumacd
             // 
@@ -390,6 +393,7 @@
             this.tbthembttbenhnhan.TabIndex = 11;
             this.tbthembttbenhnhan.Text = "thêm";
             this.tbthembttbenhnhan.UseVisualStyleBackColor = true;
+            this.tbthembttbenhnhan.Click += new System.EventHandler(this.tbthembttbenhnhan_Click);
             // 
             // label23
             // 
@@ -561,6 +565,7 @@
             this.tabxembttxuatdoanhthu.TabIndex = 26;
             this.tabxembttxuatdoanhthu.Text = "xuất";
             this.tabxembttxuatdoanhthu.UseVisualStyleBackColor = true;
+            this.tabxembttxuatdoanhthu.Click += new System.EventHandler(this.tabxembttxuatdoanhthu_Click);
             // 
             // groupBox7
             // 
@@ -585,6 +590,7 @@
             this.tbxembttxemhoadon.TabIndex = 32;
             this.tbxembttxemhoadon.Text = "xem";
             this.tbxembttxemhoadon.UseVisualStyleBackColor = true;
+            this.tbxembttxemhoadon.Click += new System.EventHandler(this.tbxembttxemhoadon_Click);
             // 
             // tbxemtxttenbenhnhan
             // 
@@ -665,6 +671,7 @@
             this.tbxembttxuadanhsachbenhnhan.TabIndex = 20;
             this.tbxembttxuadanhsachbenhnhan.Text = "xuất";
             this.tbxembttxuadanhsachbenhnhan.UseVisualStyleBackColor = true;
+            this.tbxembttxuadanhsachbenhnhan.Click += new System.EventHandler(this.tbxembttxuadanhsachbenhnhan_Click);
             // 
             // groupBox4
             // 
@@ -770,6 +777,7 @@
             this.tbxembttdoanhthu.TabIndex = 17;
             this.tbxembttdoanhthu.Text = "doanh thu";
             this.tbxembttdoanhthu.UseVisualStyleBackColor = true;
+            this.tbxembttdoanhthu.Click += new System.EventHandler(this.tbxembttdoanhthu_Click);
             // 
             // textBox10
             // 
@@ -813,6 +821,7 @@
             this.tbxembttsoluongthuoc.TabIndex = 11;
             this.tbxembttsoluongthuoc.Text = "s,lượng";
             this.tbxembttsoluongthuoc.UseVisualStyleBackColor = true;
+            this.tbxembttsoluongthuoc.Click += new System.EventHandler(this.tbxembttsoluongthuoc_Click);
             // 
             // tbxemdgv
             // 
@@ -921,6 +930,7 @@
             this.tbsuatxtsoloaibenh.Name = "tbsuatxtsoloaibenh";
             this.tbsuatxtsoloaibenh.Size = new System.Drawing.Size(86, 20);
             this.tbsuatxtsoloaibenh.TabIndex = 22;
+            this.tbsuatxtsoloaibenh.TextChanged += new System.EventHandler(this.tbsuatxtsoloaibenh_TextChanged);
             // 
             // label3
             // 
@@ -937,6 +947,7 @@
             this.tbsuatxtsoloaithuoc.Name = "tbsuatxtsoloaithuoc";
             this.tbsuatxtsoloaithuoc.Size = new System.Drawing.Size(86, 20);
             this.tbsuatxtsoloaithuoc.TabIndex = 20;
+            this.tbsuatxtsoloaithuoc.TextChanged += new System.EventHandler(this.tbsuatxtsoloaithuoc_TextChanged);
             // 
             // label1
             // 
@@ -953,6 +964,7 @@
             this.tbsuatxtsobenhnhanngay.Name = "tbsuatxtsobenhnhanngay";
             this.tbsuatxtsobenhnhanngay.Size = new System.Drawing.Size(86, 20);
             this.tbsuatxtsobenhnhanngay.TabIndex = 18;
+            this.tbsuatxtsobenhnhanngay.TextChanged += new System.EventHandler(this.tbsuatxtsobenhnhanngay_TextChanged);
             // 
             // tbsuabttthamsosua
             // 
@@ -1038,6 +1050,7 @@
             this.tbsuabttthuocsua.TabIndex = 11;
             this.tbsuabttthuocsua.Text = "sửa";
             this.tbsuabttthuocsua.UseVisualStyleBackColor = true;
+            this.tbsuabttthuocsua.Click += new System.EventHandler(this.tbsuabttthuocsua_Click);
             // 
             // tbsuadgv
             // 
@@ -1096,6 +1109,7 @@
             this.bbttxoa.TabIndex = 20;
             this.bbttxoa.Text = "xóa";
             this.bbttxoa.UseVisualStyleBackColor = true;
+            this.bbttxoa.Click += new System.EventHandler(this.bbttxoa_Click);
             // 
             // label39
             // 
@@ -1130,6 +1144,7 @@
             this.bbtthem.TabIndex = 3;
             this.bbtthem.Text = "thêm";
             this.bbtthem.UseVisualStyleBackColor = true;
+            this.bbtthem.Click += new System.EventHandler(this.bbtthem_Click);
             // 
             // btxtmabenh
             // 
@@ -1270,6 +1285,7 @@
             this.tbttthem.TabIndex = 3;
             this.tbttthem.Text = "thêm";
             this.tbttthem.UseVisualStyleBackColor = true;
+            this.tbttthem.Click += new System.EventHandler(this.tbttthem_Click);
             // 
             // ttxtmathuoc
             // 
@@ -1330,6 +1346,7 @@
             this.DVbttxoa.TabIndex = 20;
             this.DVbttxoa.Text = "xóa";
             this.DVbttxoa.UseVisualStyleBackColor = true;
+            this.DVbttxoa.Click += new System.EventHandler(this.DVbttxoa_Click);
             // 
             // label42
             // 
@@ -1364,6 +1381,7 @@
             this.DVbttthem.TabIndex = 3;
             this.DVbttthem.Text = "thêm";
             this.DVbttthem.UseVisualStyleBackColor = true;
+            this.DVbttthem.Click += new System.EventHandler(this.DVbttthem_Click);
             // 
             // DVtxtdonvi
             // 
@@ -1395,6 +1413,7 @@
             this.CDbttxoa.TabIndex = 20;
             this.CDbttxoa.Text = "xóa";
             this.CDbttxoa.UseVisualStyleBackColor = true;
+            this.CDbttxoa.Click += new System.EventHandler(this.CDbttxoa_Click);
             // 
             // label40
             // 

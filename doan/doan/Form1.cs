@@ -41,7 +41,6 @@ namespace doan
             }
             else// bên login thông báo không thành công
             {
-
                 Application.Exit();
             }
         }
@@ -330,7 +329,7 @@ namespace doan
             }
         }
 
-        // xóa mật khẩu
+        // sửa số lượng thuốc
         private void tbsuabttthuocsua_Click(object sender, EventArgs e)
         {
             if (tbsuatxtsoluong.Text != null && tbsuatxtmathuoc.Text != null)
@@ -778,5 +777,8 @@ namespace doan
                 CDvDVdgv.DataSource = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi, a.TenDonVi };
             }
         }
+
+       
+      
     }
 }

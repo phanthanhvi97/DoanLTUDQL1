@@ -62,8 +62,8 @@ namespace doan
             }
 
 
-            username = tbdntxttaikhoan.Text;
-            password = tbdntxtmatkhau.Text;
+            username = tbttxttaikhoan.Text;
+            password = tbttxtmatkhau.Text;
             login.i = 1;
             this.Close();
 
