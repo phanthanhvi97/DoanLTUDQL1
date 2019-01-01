@@ -480,16 +480,24 @@ namespace doan
         //xóa bệnh
         private void bbttxoa_Click(object sender, EventArgs e)
         {
-            UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau28(btxtmabenh.Text);
-            if (i == 1)
+            try
             {
-                MessageBox.Show("mã bệnh không  tồn tại");
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau28(btxtmabenh.Text);
+                if (i == 1)
+                {
+                    MessageBox.Show("mã bệnh không  tồn tại");
+                }
+                else
+                {
+                    tvbdgv.DataSource = from a in ql.Benhs where 1 == 1 select new { a.MaBenh, a.TenBenh };
+                }
             }
-            else
+            catch (Exception)
             {
-                tvbdgv.DataSource = from a in ql.Benhs where 1 == 1 select new { a.MaBenh, a.TenBenh };
+                MessageBox.Show("không thể xóa vì bị tham chiếu");
             }
+           
         }
         //thêm đơn vị
         private void DVbttthem_Click(object sender, EventArgs e)
@@ -679,16 +687,25 @@ namespace doan
         //xóa thuốc
         private void tbttxoa_Click(object sender, EventArgs e)
         {
-            UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau26(ttxtmathuoc.Text);
-            if (i == 1)
+
+            try
             {
-                MessageBox.Show("mã thuốc không  tồn tại");
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau26(ttxtmathuoc.Text);
+                if (i == 1)
+                {
+                    MessageBox.Show("mã thuốc không  tồn tại");
+                }
+                else
+                {
+                    tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
+                }
             }
-            else
+            catch(Exception)
             {
-                tvbdgv.DataSource = from a in ql.Thuocs where 1 == 1 select new { a.MaThuoc, a.TenThuoc, a.MaDonVi, a.SlTon, a.Gia };
+                MessageBox.Show("không thể xóa vì bị tham chiếu");
             }
+           
         }
 
         // thêm bệnh nhân
@@ -752,30 +769,46 @@ namespace doan
         //xóa cách dùng
         private void CDbttxoa_Click(object sender, EventArgs e)
         {
-            UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau30(CDtxtma.Text);
-            if (i == 1)
+            try
             {
-                MessageBox.Show("mã bệnh không  tồn tại");
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau30(CDtxtma.Text);
+                if (i == 1)
+                {
+                    MessageBox.Show("mã bệnh không  tồn tại");
+                }
+                else
+                {
+                    CDvDVdgv.DataSource = from a in ql.CachDungs where 1 == 1 select new { a.MaCD, a.HuongDan };
+                }
             }
-            else
+            catch (Exception)
             {
-                CDvDVdgv.DataSource = from a in ql.CachDungs where 1 == 1 select new { a.MaCD, a.HuongDan };
+                MessageBox.Show("không thể xóa vì bị tham chiếu");
             }
+           
         }
         //xóa đơn vị
         private void DVbttxoa_Click(object sender, EventArgs e)
         {
-            UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau32(DVtxtdonvi.Text);
-            if (i == 1)
+            try
             {
-                MessageBox.Show("mã bệnh không  tồn tại");
+                UDQLDataContext ql = new UDQLDataContext();
+                int i = ql.cau32(DVtxtdonvi.Text);
+                if (i == 1)
+                {
+                    MessageBox.Show("mã bệnh không  tồn tại");
+                }
+                else
+                {
+                    CDvDVdgv.DataSource = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi, a.TenDonVi };
+                }
             }
-            else
+            catch (Exception)
             {
-                CDvDVdgv.DataSource = from a in ql.DonVis where 1 == 1 select new { a.MaDonVi, a.TenDonVi };
+                MessageBox.Show("không thể xóa vì bị tham chiếu");
             }
+           
         }
 
        
