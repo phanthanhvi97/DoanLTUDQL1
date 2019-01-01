@@ -75,5 +75,6 @@ namespace doan
             if (r == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
+
     }
 }
