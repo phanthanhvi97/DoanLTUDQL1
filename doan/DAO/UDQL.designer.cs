@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace doan
+namespace doan.DAO
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,7 +22,7 @@ namespace doan
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="udql")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UDQL")]
 	public partial class UDQLDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -57,7 +57,7 @@ namespace doan
     #endregion
 		
 		public UDQLDataContext() : 
-				base(global::doan.Properties.Settings.Default.udqlConnectionString, mappingSource)
+				base(global::doan.Properties.Settings.Default.UDQLConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -235,38 +235,33 @@ namespace doan
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau20")]
-		public int cau20()
+		public void cau20()
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau21")]
-		public int cau21()
+		public void cau21()
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau22")]
-		public int cau22([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(10)")] string makb)
+		public void cau22([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(10)")] string makb)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), makb);
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), makb);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau23")]
-		public int cau23([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> thang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
+		public void cau23([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> thang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), thang, nam);
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), thang, nam);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau24")]
-		public int cau24([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> thang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
+		public void cau24([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> thang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), thang, nam);
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), thang, nam);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cau25")]
