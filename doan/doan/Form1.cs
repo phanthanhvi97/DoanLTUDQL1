@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using doan.BUS;
+using doan.DAO;
 namespace doan
 {
     public partial class Form1 : Form
@@ -19,6 +20,7 @@ namespace doan
         }
         void load()
         {
+            
             UDQLDataContext ql = new UDQLDataContext();
             login f = new login();
             this.Hide();
@@ -57,8 +59,9 @@ namespace doan
             //số bệnh nhân
             if (tbsuatxtsobenhnhanngay.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau5(int.Parse(tbsuatxtsobenhnhanngay.Text));
+                int j = b.cau5(int.Parse(tbsuatxtsobenhnhanngay.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k update đc");
@@ -69,8 +72,9 @@ namespace doan
             //tbsuatxtsoloaithuoc
             if (tbsuatxtsoloaithuoc.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau6(int.Parse(tbsuatxtsoloaithuoc.Text));
+                int j = b.cau6(int.Parse(tbsuatxtsoloaithuoc.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k up date đc");
@@ -81,8 +85,9 @@ namespace doan
             //tbsuatxtsoloaibenh
             if (tbsuatxtsoloaibenh.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau8(int.Parse(tbsuatxtsoloaibenh.Text));
+                int j = b.cau8(int.Parse(tbsuatxtsoloaibenh.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k update được");
@@ -93,8 +98,9 @@ namespace doan
             //tbsuatxtsoloaidonvi
             if (tbsuatxtsoloaidonvi.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau7(int.Parse(tbsuatxtsoloaidonvi.Text));
+                int j = b.cau7(int.Parse(tbsuatxtsoloaidonvi.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k update được");
@@ -105,8 +111,9 @@ namespace doan
             //tbsuatxttienkham 
             if (tbsuatxttienkham.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau10(int.Parse(tbsuatxttienkham.Text));
+                int j = b.cau10(int.Parse(tbsuatxttienkham.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k update được");
@@ -117,8 +124,9 @@ namespace doan
             //tbsuatxtsoCD
             if (tbsuatxtsoCD.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int j = ql.cau9(int.Parse(tbsuatxtsoCD.Text));
+                int j = b.cau9(int.Parse(tbsuatxtsoCD.Text));
                 if (j == 0)
                 {
                     MessageBox.Show("k update được");
@@ -145,8 +153,9 @@ namespace doan
             DialogResult r = MessageBox.Show("bạn có chắc xóa tài khoản hiển tại?", "thông bảo", MessageBoxButtons.YesNo);
             if (r == System.Windows.Forms.DialogResult.Yes)
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau4(login.password, login.username);
+                int i = b.cau4(login.password, login.username);
                 if (i == 0)
                 {
                     MessageBox.Show("mật khẩu không chính xác, xóa không được");
@@ -334,8 +343,9 @@ namespace doan
         {
             if (tbsuatxtsoluong.Text != null && tbsuatxtmathuoc.Text != null)
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau11(tbsuatxtmathuoc.Text, int.Parse(tbsuatxtsoluong.Text));
+                int i = b.cau11(tbsuatxtmathuoc.Text, int.Parse(tbsuatxtsoluong.Text));
                 if (i == 0)
                 {
                     MessageBox.Show("mật khẩu không chính xác, xóa không được");
@@ -356,8 +366,9 @@ namespace doan
         {
             if (textBox10.Text != "" && textBox9.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                tbxemdgv.DataSource = ql.cau18(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                tbxemdgv.DataSource = b.cau18(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
                 tabxembttxuatdoanhthu.Enabled = !tabxembttxuatdoanhthu.Enabled;
             }
             else
@@ -372,9 +383,9 @@ namespace doan
         {
             if (textBox10.Text != "" && textBox9.Text != "")
             {
-
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                tbxemdgv.DataSource = ql.cau19(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                tbxemdgv.DataSource = b.cau19(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
                 tbxembttxuatdlthuoc.Enabled = !tbxembttxuatdlthuoc.Enabled;
                 //câu này là câu 19
             }
@@ -390,8 +401,9 @@ namespace doan
         {
             if (tbxemtxtmakb.Text != "" && tbxemtxttenbenhnhan.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                tbxemdgv.DataSource = ql.cau17(tbxemtxtmakb.Text);
+                tbxemdgv.DataSource = b.cau17(tbxemtxtmakb.Text);
             }
             else
             {
@@ -406,10 +418,11 @@ namespace doan
 
             if (tbthemtxtphieumakb.Text != "")
             {
+                BUSS b = new BUSS();
                 if (tbthemtxtphieusoluong.Text == "")
                     tbthemtxtphieusoluong.Text = "0";
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau14(tbthemtxtphieumakb.Text, tbthemtxtphieumabn.Text, tbthemtxtphieumabenh.Text, tbthemtxtphieumathuoc.Text, int.Parse(tbthemtxtphieusoluong.Text), tbthemtxtphieumacd.Text);
+                int i = b.cau14(tbthemtxtphieumakb.Text, tbthemtxtphieumabn.Text, tbthemtxtphieumabenh.Text, tbthemtxtphieumathuoc.Text, int.Parse(tbthemtxtphieusoluong.Text), tbthemtxtphieumacd.Text);
                 if (i == 0)
                 {
                     MessageBox.Show("không thêm được do thiếu bệnh nhân");
@@ -470,8 +483,9 @@ namespace doan
             }
             else
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                ql.cau23(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                b.cau23(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
                 OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
                 chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
                 chuc.ShowDialog();// Hiển thị file
@@ -482,8 +496,9 @@ namespace doan
         {
             try
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau28(btxtmabenh.Text);
+                int i = b.cau28(btxtmabenh.Text);
                 if (i == 1)
                 {
                     MessageBox.Show("mã bệnh không  tồn tại");
@@ -502,8 +517,9 @@ namespace doan
         //thêm đơn vị
         private void DVbttthem_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau31(DVtxtdonvi.Text, DVtxtten.Text);
+            int i = b.cau31(DVtxtdonvi.Text, DVtxtten.Text);
             if (i == 1)
             {
                 MessageBox.Show("bệnh đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
@@ -528,23 +544,26 @@ namespace doan
         //xem danh sách bệnh nhân tab xem
         private void tbxembttxemdanhsachbenhnhan_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            tbxemdgv.DataSource = ql.cau15();
+            tbxemdgv.DataSource = b.cau15();
         }
         // danh sách bệnh nhân theo ngày hoạc là xem hết luon nek
         private void tbxemdanhsachkham_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked == false)
             {
+                BUSS b = new BUSS();
                 // xem theo ngày
                 UDQLDataContext ql = new UDQLDataContext();
-                tbxemdgv.DataSource = ql.cau13(tbxemdtp.Value);
+                tbxemdgv.DataSource = b.cau13(tbxemdtp.Value);
             }
             else
             {
+                BUSS b = new BUSS();
                 //xem hết
                 UDQLDataContext ql = new UDQLDataContext();
-                tbxemdgv.DataSource = ql.cau16();
+                tbxemdgv.DataSource = b.cau16();
             }
 
         }
@@ -608,8 +627,9 @@ namespace doan
             }
             else
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                ql.cau22(tbxemtxtmakb.Text);
+                b.cau22(tbxemtxtmakb.Text);
                 OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
                 chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
                 chuc.ShowDialog();// Hiển thị file
@@ -618,8 +638,9 @@ namespace doan
         //xuất danh sách bệnh nhân ra excels tên benhnhan.xls
         private void tbxembttxuadanhsachbenhnhan_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            ql.cau20();
+            b.cau20();
             OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
             chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
             chuc.ShowDialog();// Hiển thị file
@@ -627,8 +648,9 @@ namespace doan
         //xuất danh sách khám bệnh của tab xem
         private void tbxemsuatsanhsachkhambenh_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            ql.cau21();
+            b.cau21();
             OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
             chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
             chuc.ShowDialog();// Hiển thị file
@@ -645,8 +667,9 @@ namespace doan
             }
             else
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                ql.cau24(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
+                b.cau24(int.Parse(textBox9.Text), int.Parse(textBox10.Text));
                 OpenFileDialog chuc = new OpenFileDialog();// new thư mục 
                 chuc.InitialDirectory = @"C:\";// hiển thị ổ đĩa
                 chuc.ShowDialog();// Hiển thị file
@@ -655,8 +678,9 @@ namespace doan
         //thêm thuốc
         private void tbttthem_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau25(ttxtmathuoc.Text, ttxttenthuoc.Text, tcmbdonvi.Text, int.Parse(ttxtgia.Text), int.Parse(ttxtslton.Text));
+            int i = b.cau25(ttxtmathuoc.Text, ttxttenthuoc.Text, tcmbdonvi.Text, int.Parse(ttxtgia.Text), int.Parse(ttxtslton.Text));
             if (i == 1)
             {
                 MessageBox.Show("thuốc đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
@@ -690,8 +714,9 @@ namespace doan
 
             try
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau26(ttxtmathuoc.Text);
+                int i = b.cau26(ttxtmathuoc.Text);
                 if (i == 1)
                 {
                     MessageBox.Show("mã thuốc không  tồn tại");
@@ -713,8 +738,9 @@ namespace doan
         {
             if (tbthemtxtmabn.Text != "")
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau12(tbthemtxtmabn.Text, tbthemtxthoten.Text, tbthemcmbgioitinh.Text, tbthemdupngaysinh.Value, tbxemthemtxtdiachi.Text, tbthemtxtctrung.Text);
+                int i = b.cau12(tbthemtxtmabn.Text, tbthemtxthoten.Text, tbthemcmbgioitinh.Text, tbthemdupngaysinh.Value, tbxemthemtxtdiachi.Text, tbthemtxtctrung.Text);
                 if (i == 0)
                 {
                     MessageBox.Show("không thêm được");
@@ -729,8 +755,9 @@ namespace doan
         //thêm bệnh
         private void bbtthem_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau27(btxtmabenh.Text, btxttenbenh.Text);
+            int i = b.cau27(btxtmabenh.Text, btxttenbenh.Text);
             if (i == 1)
             {
                 MessageBox.Show("bệnh đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
@@ -749,8 +776,9 @@ namespace doan
         //thêm cách dùng
         private void CDbttthem_Click(object sender, EventArgs e)
         {
+            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau29(CDtxtma.Text, CDtxtHD.Text);
+            int i = b.cau29(CDtxtma.Text, CDtxtHD.Text);
             if (i == 1)
             {
                 MessageBox.Show("CD đã đạt tới giới hạn tham số thuốc, cần tăng tham số");
@@ -771,8 +799,9 @@ namespace doan
         {
             try
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau30(CDtxtma.Text);
+                int i = b.cau30(CDtxtma.Text);
                 if (i == 1)
                 {
                     MessageBox.Show("mã bệnh không  tồn tại");
@@ -793,8 +822,9 @@ namespace doan
         {
             try
             {
+                BUSS b = new BUSS();
                 UDQLDataContext ql = new UDQLDataContext();
-                int i = ql.cau32(DVtxtdonvi.Text);
+                int i = b.cau32(DVtxtdonvi.Text);
                 if (i == 1)
                 {
                     MessageBox.Show("mã bệnh không  tồn tại");
