@@ -30,21 +30,21 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tbdnbttdongy = new System.Windows.Forms.Button();
-            this.tbdntxttaikhoan = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tbdnbttthoat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbdntxtmatkhau = new System.Windows.Forms.TextBox();
-            this.tbdnbttthoat = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbtbtttao = new System.Windows.Forms.Button();
-            this.tbttxttaikhoan = new System.Windows.Forms.TextBox();
-            this.tbttxtmatkhau = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbdntxttaikhoan = new System.Windows.Forms.TextBox();
+            this.tbdnbttdongy = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbtbttthoat = new System.Windows.Forms.Button();
             this.tbttxtnlmatkhau = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbtbttthoat = new System.Windows.Forms.Button();
+            this.tbttxtmatkhau = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbttxttaikhoan = new System.Windows.Forms.TextBox();
+            this.tbtbtttao = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,49 +76,15 @@
             this.tabPage1.Text = "đăng nhập";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tbdnbttthoat
             // 
-            this.tabPage2.Controls.Add(this.tbtbttthoat);
-            this.tabPage2.Controls.Add(this.tbttxtnlmatkhau);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.tbttxtmatkhau);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.tbttxttaikhoan);
-            this.tabPage2.Controls.Add(this.tbtbtttao);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(264, 235);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tạo tài khoản";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tbdnbttdongy
-            // 
-            this.tbdnbttdongy.Location = new System.Drawing.Point(80, 169);
-            this.tbdnbttdongy.Name = "tbdnbttdongy";
-            this.tbdnbttdongy.Size = new System.Drawing.Size(75, 23);
-            this.tbdnbttdongy.TabIndex = 0;
-            this.tbdnbttdongy.Text = "đồng ý";
-            this.tbdnbttdongy.UseVisualStyleBackColor = true;
-            this.tbdnbttdongy.Click += new System.EventHandler(this.tbdnbttdongy_Click);
-            // 
-            // tbdntxttaikhoan
-            // 
-            this.tbdntxttaikhoan.Location = new System.Drawing.Point(90, 38);
-            this.tbdntxttaikhoan.Name = "tbdntxttaikhoan";
-            this.tbdntxttaikhoan.Size = new System.Drawing.Size(146, 20);
-            this.tbdntxttaikhoan.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "tài khoản:";
+            this.tbdnbttthoat.Location = new System.Drawing.Point(161, 169);
+            this.tbdnbttthoat.Name = "tbdnbttthoat";
+            this.tbdnbttthoat.Size = new System.Drawing.Size(75, 23);
+            this.tbdnbttthoat.TabIndex = 5;
+            this.tbdnbttthoat.Text = "thoát";
+            this.tbdnbttthoat.UseVisualStyleBackColor = true;
+            this.tbdnbttthoat.Click += new System.EventHandler(this.tbdnbttthoat_Click);
             // 
             // label2
             // 
@@ -137,58 +103,59 @@
             this.tbdntxtmatkhau.Size = new System.Drawing.Size(156, 20);
             this.tbdntxtmatkhau.TabIndex = 3;
             // 
-            // tbdnbttthoat
+            // label1
             // 
-            this.tbdnbttthoat.Location = new System.Drawing.Point(161, 169);
-            this.tbdnbttthoat.Name = "tbdnbttthoat";
-            this.tbdnbttthoat.Size = new System.Drawing.Size(75, 23);
-            this.tbdnbttthoat.TabIndex = 5;
-            this.tbdnbttthoat.Text = "thoát";
-            this.tbdnbttthoat.UseVisualStyleBackColor = true;
-            this.tbdnbttthoat.Click += new System.EventHandler(this.tbdnbttthoat_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "tài khoản:";
             // 
-            // label3
+            // tbdntxttaikhoan
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "tài khoản:";
+            this.tbdntxttaikhoan.Location = new System.Drawing.Point(90, 38);
+            this.tbdntxttaikhoan.Name = "tbdntxttaikhoan";
+            this.tbdntxttaikhoan.Size = new System.Drawing.Size(146, 20);
+            this.tbdntxttaikhoan.TabIndex = 1;
             // 
-            // tbtbtttao
+            // tbdnbttdongy
             // 
-            this.tbtbtttao.Location = new System.Drawing.Point(81, 170);
-            this.tbtbtttao.Name = "tbtbtttao";
-            this.tbtbtttao.Size = new System.Drawing.Size(75, 23);
-            this.tbtbtttao.TabIndex = 1;
-            this.tbtbtttao.Text = "tạo";
-            this.tbtbtttao.UseVisualStyleBackColor = true;
-            this.tbtbtttao.Click += new System.EventHandler(this.tbtbtttao_Click);
+            this.tbdnbttdongy.Location = new System.Drawing.Point(80, 169);
+            this.tbdnbttdongy.Name = "tbdnbttdongy";
+            this.tbdnbttdongy.Size = new System.Drawing.Size(75, 23);
+            this.tbdnbttdongy.TabIndex = 0;
+            this.tbdnbttdongy.Text = "đồng ý";
+            this.tbdnbttdongy.UseVisualStyleBackColor = true;
+            this.tbdnbttdongy.Click += new System.EventHandler(this.tbdnbttdongy_Click);
             // 
-            // tbttxttaikhoan
+            // tabPage2
             // 
-            this.tbttxttaikhoan.Location = new System.Drawing.Point(81, 29);
-            this.tbttxttaikhoan.Name = "tbttxttaikhoan";
-            this.tbttxttaikhoan.Size = new System.Drawing.Size(156, 20);
-            this.tbttxttaikhoan.TabIndex = 2;
+            this.tabPage2.Controls.Add(this.tbtbttthoat);
+            this.tabPage2.Controls.Add(this.tbttxtnlmatkhau);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.tbttxtmatkhau);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.tbttxttaikhoan);
+            this.tabPage2.Controls.Add(this.tbtbtttao);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(264, 235);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tạo tài khoản";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tbttxtmatkhau
+            // tbtbttthoat
             // 
-            this.tbttxtmatkhau.Location = new System.Drawing.Point(81, 74);
-            this.tbttxtmatkhau.Name = "tbttxtmatkhau";
-            this.tbttxtmatkhau.PasswordChar = '*';
-            this.tbttxtmatkhau.Size = new System.Drawing.Size(156, 20);
-            this.tbttxtmatkhau.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "mật khẩu";
+            this.tbtbttthoat.Location = new System.Drawing.Point(162, 170);
+            this.tbtbttthoat.Name = "tbtbttthoat";
+            this.tbtbttthoat.Size = new System.Drawing.Size(75, 23);
+            this.tbtbttthoat.TabIndex = 7;
+            this.tbtbttthoat.Text = "thoát";
+            this.tbtbttthoat.UseVisualStyleBackColor = true;
+            this.tbtbttthoat.Click += new System.EventHandler(this.tbtbttthoat_Click);
             // 
             // tbttxtnlmatkhau
             // 
@@ -207,15 +174,48 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "nhập lại mk:";
             // 
-            // tbtbttthoat
+            // tbttxtmatkhau
             // 
-            this.tbtbttthoat.Location = new System.Drawing.Point(162, 170);
-            this.tbtbttthoat.Name = "tbtbttthoat";
-            this.tbtbttthoat.Size = new System.Drawing.Size(75, 23);
-            this.tbtbttthoat.TabIndex = 7;
-            this.tbtbttthoat.Text = "thoát";
-            this.tbtbttthoat.UseVisualStyleBackColor = true;
-            this.tbtbttthoat.Click += new System.EventHandler(this.tbtbttthoat_Click);
+            this.tbttxtmatkhau.Location = new System.Drawing.Point(81, 74);
+            this.tbttxtmatkhau.Name = "tbttxtmatkhau";
+            this.tbttxtmatkhau.PasswordChar = '*';
+            this.tbttxtmatkhau.Size = new System.Drawing.Size(156, 20);
+            this.tbttxtmatkhau.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "mật khẩu";
+            // 
+            // tbttxttaikhoan
+            // 
+            this.tbttxttaikhoan.Location = new System.Drawing.Point(81, 29);
+            this.tbttxttaikhoan.Name = "tbttxttaikhoan";
+            this.tbttxttaikhoan.Size = new System.Drawing.Size(156, 20);
+            this.tbttxttaikhoan.TabIndex = 2;
+            // 
+            // tbtbtttao
+            // 
+            this.tbtbtttao.Location = new System.Drawing.Point(81, 170);
+            this.tbtbtttao.Name = "tbtbtttao";
+            this.tbtbtttao.Size = new System.Drawing.Size(75, 23);
+            this.tbtbtttao.TabIndex = 1;
+            this.tbtbtttao.Text = "tạo";
+            this.tbtbtttao.UseVisualStyleBackColor = true;
+            this.tbtbtttao.Click += new System.EventHandler(this.tbtbtttao_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "tài khoản:";
             // 
             // login
             // 

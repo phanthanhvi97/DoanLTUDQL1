@@ -33,15 +33,5 @@ namespace doan.Properties {
                 return ((string)(this["udqlConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-C423K81;Initial Catalog=UDQL;Integrated Security=True")]
-        public string UDQLConnectionString1 {
-            get {
-                return ((string)(this["UDQLConnectionString1"]));
-            }
-        }
     }
 }

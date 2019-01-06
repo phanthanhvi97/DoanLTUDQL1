@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using doan.BUS;
-using doan.DAO;
 
 namespace doan
 {
@@ -21,31 +19,29 @@ namespace doan
         {
             InitializeComponent();
         }
-
-        //đăng nhập
+        // Đăng nhập
         private void tbdnbttdongy_Click(object sender, EventArgs e)
         {
-            BUSS b = new BUSS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = b.cau1(tbdntxtmatkhau.Text , tbdntxttaikhoan.Text);
+            int i = ql.cau1(tbdntxtmatkhau.Text, tbdntxttaikhoan.Text);
             if (i == 0)
             {
                 MessageBox.Show("mật khẩu không chính xác");
                 return;
             }
-                
+
             username = tbdntxttaikhoan.Text;
             password = tbdntxtmatkhau.Text;
             login.i = 1;
             this.Close();
         }
-
         private void tbdnbttthoat_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("bạn có muốn thoát ?" , "thông báo", MessageBoxButtons.YesNo);
+            DialogResult r = MessageBox.Show("bạn có muốn thoát ?", "thông báo", MessageBoxButtons.YesNo);
             if (r == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
+
 
         //tạo tài khoản
         private void tbtbtttao_Click(object sender, EventArgs e)
@@ -56,19 +52,18 @@ namespace doan
                 MessageBox.Show("mật khẩu không chính xác");
                 return;
             }
-            BUSS b = new BUSS();
 
             UDQLDataContext ql = new UDQLDataContext();
-            int a = b.cau3(tbttxtmatkhau.Text, tbttxttaikhoan.Text);
+            int a = ql.cau3(tbttxtmatkhau.Text, tbttxttaikhoan.Text);
             if (a == 0)
             {
                 MessageBox.Show("tài khoản tồn tại rồi");
                 return;
             }
-                
-            
-            username = tbdntxttaikhoan.Text;
-            password = tbdntxtmatkhau.Text;
+
+
+            username = tbttxttaikhoan.Text;
+            password = tbttxtmatkhau.Text;
             login.i = 1;
             this.Close();
 
@@ -80,5 +75,6 @@ namespace doan
             if (r == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
+
     }
 }

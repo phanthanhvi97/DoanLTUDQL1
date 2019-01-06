@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UDQL" Class="UDQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-C423K81;Initial Catalog=UDQL;Integrated Security=True" SettingsObjectName="doan.Properties.Settings" SettingsPropertyName="UDQLConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="udql" Class="UDQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EHNM3J5\MSSQLSERVER17;Initial Catalog=udql;Integrated Security=True" SettingsObjectName="doan.Properties.Settings" SettingsPropertyName="udqlConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Benh" Member="Benhs">
     <Type Name="Benh">
       <Column Name="MaBenh" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -177,18 +177,25 @@
       <Column Name="sl" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.cau20" Method="cau20" />
-  <Function Name="dbo.cau21" Method="cau21" />
+  <Function Name="dbo.cau20" Method="cau20">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cau21" Method="cau21">
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.cau22" Method="cau22">
     <Parameter Name="makb" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.cau23" Method="cau23">
     <Parameter Name="thang" Type="System.Int32" DbType="Int" />
     <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.cau24" Method="cau24">
     <Parameter Name="thang" Type="System.Int32" DbType="Int" />
     <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.cau25" Method="cau25">
     <Parameter Name="mathuoc" Type="System.String" DbType="VarChar(10)" />

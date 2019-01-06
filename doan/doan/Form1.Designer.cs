@@ -144,13 +144,7 @@
             this.ttxtmathuoc = new System.Windows.Forms.TextBox();
             this.tvbdgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.CDbttxoa = new System.Windows.Forms.Button();
-            this.label40 = new System.Windows.Forms.Label();
-            this.CDtxtHD = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.CDbttthem = new System.Windows.Forms.Button();
-            this.CDtxtma = new System.Windows.Forms.TextBox();
+            this.CDvDVdgv = new System.Windows.Forms.DataGridView();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.DVbttxoa = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
@@ -158,7 +152,13 @@
             this.label43 = new System.Windows.Forms.Label();
             this.DVbttthem = new System.Windows.Forms.Button();
             this.DVtxtdonvi = new System.Windows.Forms.TextBox();
-            this.CDvDVdgv = new System.Windows.Forms.DataGridView();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.CDbttxoa = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.CDtxtHD = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.CDbttthem = new System.Windows.Forms.Button();
+            this.CDtxtma = new System.Windows.Forms.TextBox();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbthemdgv)).BeginInit();
             this.groupBox9.SuspendLayout();
@@ -180,9 +180,9 @@
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tvbdgv)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDvDVdgv)).BeginInit();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // bttlogout
@@ -314,7 +314,6 @@
             this.tbthemtxtphieusoluong.Name = "tbthemtxtphieusoluong";
             this.tbthemtxtphieusoluong.Size = new System.Drawing.Size(100, 20);
             this.tbthemtxtphieusoluong.TabIndex = 7;
-            this.tbthemtxtphieusoluong.TextChanged += new System.EventHandler(this.tbthemtxtphieusoluong_TextChanged);
             // 
             // label27
             // 
@@ -616,7 +615,6 @@
             this.tbxemtxtmakb.Name = "tbxemtxtmakb";
             this.tbxemtxtmakb.Size = new System.Drawing.Size(79, 20);
             this.tbxemtxtmakb.TabIndex = 29;
-            this.tbxemtxtmakb.TextChanged += new System.EventHandler(this.tbxemtxtmakb_TextChanged);
             // 
             // label18
             // 
@@ -875,7 +873,6 @@
             this.tbsuatxttienkham.Name = "tbsuatxttienkham";
             this.tbsuatxttienkham.Size = new System.Drawing.Size(113, 20);
             this.tbsuatxttienkham.TabIndex = 29;
-            this.tbsuatxttienkham.TextChanged += new System.EventHandler(this.tbsuatxttienkham_TextChanged);
             // 
             // label5
             // 
@@ -901,7 +898,6 @@
             this.tbsuatxtsoCD.Name = "tbsuatxtsoCD";
             this.tbsuatxtsoCD.Size = new System.Drawing.Size(113, 20);
             this.tbsuatxtsoCD.TabIndex = 26;
-            this.tbsuatxtsoCD.TextChanged += new System.EventHandler(this.tbsuatxtsoCD_TextChanged);
             // 
             // label7
             // 
@@ -918,7 +914,6 @@
             this.tbsuatxtsoloaidonvi.Name = "tbsuatxtsoloaidonvi";
             this.tbsuatxtsoloaidonvi.Size = new System.Drawing.Size(113, 20);
             this.tbsuatxtsoloaidonvi.TabIndex = 24;
-            this.tbsuatxtsoloaidonvi.TextChanged += new System.EventHandler(this.tbsuatxtsoloaidonvi_TextChanged);
             // 
             // label4
             // 
@@ -1002,9 +997,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "số lượng";
+            this.label2.Text = "giá bán";
             // 
             // tbsuatxtsoluong
             // 
@@ -1046,7 +1041,6 @@
             this.tbsuatxtmathuoc.Name = "tbsuatxtmathuoc";
             this.tbsuatxtmathuoc.Size = new System.Drawing.Size(91, 20);
             this.tbsuatxtmathuoc.TabIndex = 12;
-            this.tbsuatxtmathuoc.TextChanged += new System.EventHandler(this.tbsuatxtmathuoc_TextChanged);
             // 
             // tbsuabttthuocsua
             // 
@@ -1216,7 +1210,6 @@
             this.tcmbdonvi.Name = "tcmbdonvi";
             this.tcmbdonvi.Size = new System.Drawing.Size(100, 21);
             this.tcmbdonvi.TabIndex = 13;
-            this.tcmbdonvi.SelectedIndexChanged += new System.EventHandler(this.tcmbdonvi_SelectedIndexChanged);
             // 
             // label36
             // 
@@ -1322,72 +1315,13 @@
             this.tabPage5.Text = "donvi&cachdung";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // groupBox12
+            // CDvDVdgv
             // 
-            this.groupBox12.Controls.Add(this.CDbttxoa);
-            this.groupBox12.Controls.Add(this.label40);
-            this.groupBox12.Controls.Add(this.CDtxtHD);
-            this.groupBox12.Controls.Add(this.label41);
-            this.groupBox12.Controls.Add(this.CDbttthem);
-            this.groupBox12.Controls.Add(this.CDtxtma);
-            this.groupBox12.Location = new System.Drawing.Point(3, 3);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(368, 148);
-            this.groupBox12.TabIndex = 5;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "cách dùng";
-            // 
-            // CDbttxoa
-            // 
-            this.CDbttxoa.Location = new System.Drawing.Point(167, 119);
-            this.CDbttxoa.Name = "CDbttxoa";
-            this.CDbttxoa.Size = new System.Drawing.Size(75, 23);
-            this.CDbttxoa.TabIndex = 20;
-            this.CDbttxoa.Text = "xóa";
-            this.CDbttxoa.UseVisualStyleBackColor = true;
-            this.CDbttxoa.Click += new System.EventHandler(this.CDbttxoa_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(2, 62);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 13);
-            this.label40.TabIndex = 19;
-            this.label40.Text = "Hướng dẫn";
-            // 
-            // CDtxtHD
-            // 
-            this.CDtxtHD.Location = new System.Drawing.Point(85, 54);
-            this.CDtxtHD.Name = "CDtxtHD";
-            this.CDtxtHD.Size = new System.Drawing.Size(157, 20);
-            this.CDtxtHD.TabIndex = 18;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(2, 26);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(39, 13);
-            this.label41.TabIndex = 17;
-            this.label41.Text = "mã CD";
-            // 
-            // CDbttthem
-            // 
-            this.CDbttthem.Location = new System.Drawing.Point(85, 119);
-            this.CDbttthem.Name = "CDbttthem";
-            this.CDbttthem.Size = new System.Drawing.Size(75, 23);
-            this.CDbttthem.TabIndex = 3;
-            this.CDbttthem.Text = "thêm";
-            this.CDbttthem.UseVisualStyleBackColor = true;
-            this.CDbttthem.Click += new System.EventHandler(this.CDbttthem_Click);
-            // 
-            // CDtxtma
-            // 
-            this.CDtxtma.Location = new System.Drawing.Point(85, 18);
-            this.CDtxtma.Name = "CDtxtma";
-            this.CDtxtma.Size = new System.Drawing.Size(157, 20);
-            this.CDtxtma.TabIndex = 1;
+            this.CDvDVdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CDvDVdgv.Location = new System.Drawing.Point(-4, 160);
+            this.CDvDVdgv.Name = "CDvDVdgv";
+            this.CDvDVdgv.Size = new System.Drawing.Size(759, 210);
+            this.CDvDVdgv.TabIndex = 22;
             // 
             // groupBox13
             // 
@@ -1456,13 +1390,72 @@
             this.DVtxtdonvi.Size = new System.Drawing.Size(157, 20);
             this.DVtxtdonvi.TabIndex = 1;
             // 
-            // CDvDVdgv
+            // groupBox12
             // 
-            this.CDvDVdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CDvDVdgv.Location = new System.Drawing.Point(-4, 160);
-            this.CDvDVdgv.Name = "CDvDVdgv";
-            this.CDvDVdgv.Size = new System.Drawing.Size(759, 210);
-            this.CDvDVdgv.TabIndex = 22;
+            this.groupBox12.Controls.Add(this.CDbttxoa);
+            this.groupBox12.Controls.Add(this.label40);
+            this.groupBox12.Controls.Add(this.CDtxtHD);
+            this.groupBox12.Controls.Add(this.label41);
+            this.groupBox12.Controls.Add(this.CDbttthem);
+            this.groupBox12.Controls.Add(this.CDtxtma);
+            this.groupBox12.Location = new System.Drawing.Point(3, 3);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(368, 148);
+            this.groupBox12.TabIndex = 5;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "cách dùng";
+            // 
+            // CDbttxoa
+            // 
+            this.CDbttxoa.Location = new System.Drawing.Point(167, 119);
+            this.CDbttxoa.Name = "CDbttxoa";
+            this.CDbttxoa.Size = new System.Drawing.Size(75, 23);
+            this.CDbttxoa.TabIndex = 20;
+            this.CDbttxoa.Text = "xóa";
+            this.CDbttxoa.UseVisualStyleBackColor = true;
+            this.CDbttxoa.Click += new System.EventHandler(this.CDbttxoa_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(2, 62);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 13);
+            this.label40.TabIndex = 19;
+            this.label40.Text = "Hướng dẫn";
+            // 
+            // CDtxtHD
+            // 
+            this.CDtxtHD.Location = new System.Drawing.Point(85, 54);
+            this.CDtxtHD.Name = "CDtxtHD";
+            this.CDtxtHD.Size = new System.Drawing.Size(157, 20);
+            this.CDtxtHD.TabIndex = 18;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(2, 26);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(39, 13);
+            this.label41.TabIndex = 17;
+            this.label41.Text = "mã CD";
+            // 
+            // CDbttthem
+            // 
+            this.CDbttthem.Location = new System.Drawing.Point(85, 119);
+            this.CDbttthem.Name = "CDbttthem";
+            this.CDbttthem.Size = new System.Drawing.Size(75, 23);
+            this.CDbttthem.TabIndex = 3;
+            this.CDbttthem.Text = "thêm";
+            this.CDbttthem.UseVisualStyleBackColor = true;
+            this.CDbttthem.Click += new System.EventHandler(this.CDbttthem_Click);
+            // 
+            // CDtxtma
+            // 
+            this.CDtxtma.Location = new System.Drawing.Point(85, 18);
+            this.CDtxtma.Name = "CDtxtma";
+            this.CDtxtma.Size = new System.Drawing.Size(157, 20);
+            this.CDtxtma.TabIndex = 1;
             // 
             // Form1
             // 
@@ -1507,11 +1500,11 @@
             this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tvbdgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CDvDVdgv)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CDvDVdgv)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
