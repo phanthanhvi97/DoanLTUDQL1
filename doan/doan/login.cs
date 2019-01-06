@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using doan.DAO;
+using doan.DAL;
 namespace doan
 {
     public partial class login : Form
