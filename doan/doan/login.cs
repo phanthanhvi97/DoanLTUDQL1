@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using doan.DAL;
+using doan.BUSS;
 namespace doan
 {
     public partial class login : Form
@@ -22,8 +23,9 @@ namespace doan
         // Đăng nhập
         private void tbdnbttdongy_Click(object sender, EventArgs e)
         {
+            BUS b = new BUS();
             UDQLDataContext ql = new UDQLDataContext();
-            int i = ql.cau1(tbdntxtmatkhau.Text, tbdntxttaikhoan.Text);
+            int i = b.cau1(tbdntxtmatkhau.Text, tbdntxttaikhoan.Text);
             if (i == 0)
             {
                 MessageBox.Show("mật khẩu không chính xác");
@@ -54,7 +56,8 @@ namespace doan
             }
 
             UDQLDataContext ql = new UDQLDataContext();
-            int a = ql.cau3(tbttxtmatkhau.Text, tbttxttaikhoan.Text);
+            BUS b = new BUS();
+            int a = b.cau3(tbttxtmatkhau.Text, tbttxttaikhoan.Text);
             if (a == 0)
             {
                 MessageBox.Show("tài khoản tồn tại rồi");

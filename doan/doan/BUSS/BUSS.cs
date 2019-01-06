@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using doan.DAL;
 namespace doan.BUSS
 {
-    class BUSS
+    class BUS
     {
         UDQLDataContext ql = new UDQLDataContext();
         public int cau1(string a, string b)
